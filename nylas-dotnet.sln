@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nylas-dotnet", "nylas-dotnet\nylas-dotnet.csproj", "{579B4540-1CC3-46AB-8DE2-C10127E34E28}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nylas-dotnetTests", "nylas-dotnetTests\nylas-dotnetTests.csproj", "{B4741340-D46A-49A5-AB09-1094B12907F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{579B4540-1CC3-46AB-8DE2-C10127E34E28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{579B4540-1CC3-46AB-8DE2-C10127E34E28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{579B4540-1CC3-46AB-8DE2-C10127E34E28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{579B4540-1CC3-46AB-8DE2-C10127E34E28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4741340-D46A-49A5-AB09-1094B12907F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4741340-D46A-49A5-AB09-1094B12907F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4741340-D46A-49A5-AB09-1094B12907F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4741340-D46A-49A5-AB09-1094B12907F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4FCD8FF6-1DBC-4DE1-A784-0A3747CDE574}
+	EndGlobalSection
+EndGlobal
