@@ -1,6 +1,4 @@
-﻿using System.Net.Http.Headers;
-using System.Text.Json;
-
+﻿
 namespace Nylas
 {
     /// <summary>
@@ -36,20 +34,12 @@ namespace Nylas
 		        grant_type = "authorization_code",
 		        code = authorizationCode
             };
-            var payload = authCodeRequest.ToStringContent();
 
-            var httpClient = Application.NylasClient.HttpClient;
-            httpClient.DefaultRequestHeaders.Accept.Clear();
-            httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Application.ClientSecretBase64);
-
-            var response = await httpClient.PostAsync(tokenUrl, payload);
-            AccessToken? accessToken = null;
-
-            if (response.IsSuccessStatusCode)
-            {
-                accessToken = JsonSerializer.Deserialize<AccessToken>(await response.Content.ReadAsStringAsync());
-            }
+            AccessToken? accessToken = 
+                await Application.NylasClient.ExecutePost<AccessToken?>(Application.ClientSecretBase64, 
+                    NylasClient.AuthMethod.BEARER, 
+                    tokenUrl, 
+                    authCodeRequest);
 
             return accessToken;
         }
